@@ -1,10 +1,21 @@
 package figglewatts.lsdrsdk.SeqCreate.datatypes;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 public class SequenceData {
 	private List<String> maps = new ArrayList<String>();
+	
+	public void AddSequence(String sequence) {
+		try {
+			File f = new File(sequence);
+			maps.add(f.getName());
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			System.out.println(e.getStackTrace().toString());
+		}
+	}
 	
 	@Override
 	public String toString() {
