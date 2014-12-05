@@ -34,8 +34,6 @@ public class SeqCreate {
 			gson.toJson(sequence, writer);
 			writer.close();
 		}
-		
-		System.in.read();
 	}
 
 }
